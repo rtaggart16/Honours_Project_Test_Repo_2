@@ -33,6 +33,7 @@ namespace Honours_Project_Test_2
             });
 
             services.AddTransient<ITalkService, TalkService>();
+            services.AddTransient<IAuthorService, AuthorService>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
