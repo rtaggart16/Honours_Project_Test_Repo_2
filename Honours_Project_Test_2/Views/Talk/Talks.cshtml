@@ -1,0 +1,31 @@
+﻿@model List<Honours_Project_Test_2.Models.ViewModels.Talk.Basic_Talk_Info>
+
+<div class="row">
+    <div class="col-12 text-center">
+        <h2>Talks</h2>
+    </div>
+</div>
+
+<div class="row">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Start</th>
+                <th>End</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var talk in Model)
+            {
+                <tr>
+                    <td>@talk.Name</td>
+                    <td>@talk.Description</td>
+                    <td>@talk.Start</td>
+                    <td>@talk.End</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

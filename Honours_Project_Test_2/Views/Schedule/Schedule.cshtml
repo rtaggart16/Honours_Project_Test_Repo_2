@@ -1,0 +1,31 @@
+﻿@model List<Honours_Project_Test_2.Models.ViewModels.Session.SessionViewModel>
+
+<div class="row">
+    <div class="col-12 text-center">
+        <h2>Talks</h2>
+    </div>
+</div>
+
+<div class="row">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Start</th>
+                <th>End</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var schedule in Model)
+            {
+                <tr>
+                    <td>@schedule.Name</td>
+                    <td>@schedule.Description</td>
+                    <td>@schedule.Start</td>
+                    <td>@schedule.End</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -19,6 +19,12 @@ namespace Honours_Project_Test_2.Controllers
         }
 
         [HttpGet]
+        public List<Basic_Talk_Info> Talks()
+        {
+            return _talkService.Get_All_Talks();
+        }
+
+        [HttpGet]
         [Route("get/all")]
         public List<Basic_Talk_Info> Get_All_Talks()
         {

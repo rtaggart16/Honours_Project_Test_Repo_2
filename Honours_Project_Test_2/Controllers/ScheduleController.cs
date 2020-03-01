@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Honours_Project_Test_2.Models.ViewModels.Session;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TalkAPI.Data;
@@ -18,6 +19,12 @@ namespace Honours_Project_Test_2.Controllers
         public ScheduleController(AppDB db)
         {
             _db = db;
+        }
+
+        [HttpGet]
+        public List<SessionViewModel> Schedule()
+        {
+            return Get_All_Schedules();
         }
 
         [HttpGet]
